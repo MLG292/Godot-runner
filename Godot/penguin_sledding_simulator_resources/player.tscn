@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://lgqv5skd41tu"]
+
+[ext_resource type="Texture2D" uid="uid://uql26xt8omqt" path="res://penguin_sledding_simulator_resources/textures/penquin.png" id="1_5rltf"]
+[ext_resource type="Script" path="res://penguin_sledding_simulator_resources/player.gd" id="1_dfypi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uaxqi"]
+size = Vector2(16, 19)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dfypi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("1_5rltf")
+offset = Vector2(0, -8)
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -9.5)
+shape = SubResource("RectangleShape2D_uaxqi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(64, -16)

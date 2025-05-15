@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://beochnquys4k8"]
+
+[ext_resource type="PackedScene" uid="uid://lgqv5skd41tu" path="res://penguin_sledding_simulator_resources/player.tscn" id="1_yead6"]
+
+[node name="Level" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 128, 64, 128, 128, 112, 128, 128, 232, 128, 233, 101, 351, 135, 452, 133, 498, 104, 1523, 96, 1535, 159, 426.654, 172.672, 223.722, 174.255, 106.21, 175.172, 0, 176)
+
+[node name="Player" parent="." instance=ExtResource("1_yead6")]
+position = Vector2(14, 127)
